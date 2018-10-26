@@ -1,1 +1,8 @@
-<blog-item></blog-item>
+<div class="container" style="text-align: center; color: white; background-color: cadetblue; padding-top: 50px;">
+  <h1>CHORWACJA</h1>
+<div *ngFor="let item of items">
+  <hr size="20" />
+  <app-blog-item [image]="item.image" [text]="item.text"></app-blog-item>
+</div>
+</div>
+
