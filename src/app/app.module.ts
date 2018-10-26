@@ -7,6 +7,10 @@ import { QuizComponent } from './components/quiz/quiz.component';
 import { HomeComponent } from './components/home/home.component';
 import {RouterModule, Routes} from '@angular/router';
 import { AppNavbarComponent } from './components/app-navbar/app-navbar.component';
+import { BlogItemComponent } from './components/blog-item/blog-item.component';
+import { BlogItemTextComponent } from './components/blog-item-text/blog-item-text.component';
+import { BlogItemImageComponent } from './components/blog-item-image/blog-item-image.component';
+import { BlogComponent } from './components/blog/blog.component';
 
 const appRoutes: Routes = [
   {
@@ -29,7 +33,11 @@ const appRoutes: Routes = [
     ContactComponent,
     QuizComponent,
     HomeComponent,
-    AppNavbarComponent
+    AppNavbarComponent,
+    BlogItemComponent,
+    BlogItemTextComponent,
+    BlogItemImageComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
