@@ -24,6 +24,10 @@ const appRoutes: Routes = [
   {
     path: 'quiz',
     component: QuizComponent,
+  },
+  {
+    path: 'blog',
+    component: BlogComponent,
   }
 ];
 
