@@ -1,3 +1,79 @@
-<p>
-  contact works!
-</p>
+<nav class="navbar navbar-dark bg-white">
+  <ul class="nav nav-pills nav-justified">
+    <li><a href="index.html"><img src="logo.jpeg"  class="logo"> </a></li>
+    <li class="active"><a href="index.html"><button type="button" class="btn btn-info">Strona Główna</button></a></li>
+    <li><a href="#"><button type="button" class="btn btn-info">Blog</button></a></li>
+    <li><a href="quiz.html"><button type="button" class="btn btn-info">Quiz</button></a></li>
+    <li><a href="kontakt.html"><button type="button" class="btn btn-info">Kontakt</button></a></li>
+  </ul>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Wyszukaj</button>
+  </form>
+</nav>
+<div class="container kontakt1">
+  <h1>Skontaktuj się z nami!</h1>
+  <form>
+    <div class="form-group">
+      <label for="formGroupExampleInput">Imię</label>
+      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Imię">
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput">Nazwisko</label>
+      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nazwisko">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Wprowadź email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+    <p>Płeć:</p>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+      <label class="form-check-label" for="exampleRadios1">
+        Mężczyzna
+      </label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+      <label class="form-check-label" for="exampleRadios2">
+        Kobieta
+      </label>
+    </div>
+
+    <div class="form-group padowanie1">
+      <label for="comment">Opis:</label>
+      <textarea class="form-control" rows="5" id="comment"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="age">Wiek:</label>
+      <input type="number" class="form-control" name="age" id="age" min="18">
+    </div>
+
+    <p>Stan cywilny:</p>
+    <select class="custom-select">
+      <option selected>Panna/Kawaler</option>
+      <option value="1">Wdowa/Wdowiec</option>
+      <option value="2">Zamężna/Żonaty</option>
+      <option value="3">Stary/Stara</option>
+    </select>
+
+
+    <div class="form-check padowanie1">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Accept terms</label>
+    </div>
+    <div class="form-group padowanie1">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+
+  </form>
+
+
+
+
+
+</div>
