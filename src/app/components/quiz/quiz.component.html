@@ -1,3 +1,37 @@
-<p>
-  quiz works!
-</p>
+<nav class="navbar navbar-dark bg-white">
+  <ul class="nav nav-pills nav-justified">
+    <li><a href="index.html"><img src="logo.jpeg"  class="logo"> </a></li>
+    <li class="active"><a href="index.html"><button type="button" class="btn btn-info">Strona Główna</button></a></li>
+    <li><a href="#"><button type="button" class="btn btn-info">Blog</button></a></li>
+    <li><a href="quiz.html"><button type="button" class="btn btn-info">Quiz</button></a></li>
+    <li><a href="kontakt.html"><button type="button" class="btn btn-info">Kontakt</button></a></li>
+  </ul>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Wyszukaj</button>
+  </form>
+</nav>
+
+<div class="container mainquiz">
+
+
+
+  <h1 class="h2">Quiz dla amatorów</h1>
+
+  <div id="myProgress">
+    <div id="myBar">10%</div>
+  </div>
+  <div class="quiz-container">
+    <div class="quiztest" id="quiz"></div>
+  </div>
+  <div class="quiz-container">
+    <button id="previous">Poprzednie pytanie</button>
+    <button class="buttonright" id="next" onclick="move()">Następne pytanie</button>
+    <button id="submit">Podsumuj quiz</button>
+    <div class="result">
+      <div id="results"></div>
+    </div>
+  </div>
+
+
+</div>
