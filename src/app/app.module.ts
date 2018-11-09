@@ -11,7 +11,7 @@ import { BlogItemComponent } from './components/blog-item/blog-item.component';
 import { BlogItemTextComponent } from './components/blog-item-text/blog-item-text.component';
 import { BlogItemImageComponent } from './components/blog-item-image/blog-item-image.component';
 import { BlogComponent } from './components/blog/blog.component';
-
+import {HttpClientModule} from '@angular/common/http';
 const appRoutes: Routes = [
   {
     path: 'home',
@@ -45,7 +45,8 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
