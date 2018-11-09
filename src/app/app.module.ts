@@ -12,6 +12,7 @@ import { BlogItemTextComponent } from './components/blog-item-text/blog-item-tex
 import { BlogItemImageComponent } from './components/blog-item-image/blog-item-image.component';
 import { BlogComponent } from './components/blog/blog.component';
 import {HttpClientModule} from '@angular/common/http';
+import {DataService} from './services/data-service';
 const appRoutes: Routes = [
   {
     path: 'home',
@@ -48,7 +49,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     HttpClientModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
