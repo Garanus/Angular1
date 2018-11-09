@@ -13,6 +13,8 @@ import { BlogItemImageComponent } from './components/blog-item-image/blog-item-i
 import { BlogComponent } from './components/blog/blog.component';
 import {HttpClientModule} from '@angular/common/http';
 import {DataService} from './services/data-service';
+import { FilterPipe } from './pipes/filter.pipe';
+import { FormsModule } from '@angular/forms';
 const appRoutes: Routes = [
   {
     path: 'home',
@@ -42,12 +44,14 @@ const appRoutes: Routes = [
     BlogItemComponent,
     BlogItemTextComponent,
     BlogItemImageComponent,
-    BlogComponent
+    BlogComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

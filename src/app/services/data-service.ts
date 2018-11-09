@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {map} from 'rxjs/operators';
 
 @Injectable()
 export class DataService {
@@ -8,6 +9,9 @@ export class DataService {
   constructor(private http: HttpClient) {
   }
   getAll() {
-    return this.http.get(this.url + '/posts');
+    return this.http.get(this.url + '/photos')
+      .pipe(
+        map((x: any[]) => x.slice(0, 10))
+      );
   }
 }
