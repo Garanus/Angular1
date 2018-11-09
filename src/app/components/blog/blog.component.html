@@ -1,10 +1,12 @@
 <div class="container" style="background-color: cadetblue">
-<div *ngFor="let item of items">
+  <input [(ngModel)]="filterText" placeholder="Wpisz nazwę..." id="search" type="search" class="form-control">
+
+<div *ngFor="let item of items| filter:filterText">
 <div class="card" style="width: 70rem; text-align: center; background-color: #3388aa">
-  <app-blog-item class="card-img-top" [image]="item.image"></app-blog-item>
+  <app-blog-item class="card-img-top" [image]="item.url"></app-blog-item>
   <div class="card-body">
     <h5 class="card-title">CHORWACJA</h5>
-    <app-blog-item [text]="item.text"></app-blog-item>
+    <app-blog-item [text]="item.title"></app-blog-item>
     <a href="#" class="btn btn-primary">Odwiedź</a>
   </div>
 </div>
