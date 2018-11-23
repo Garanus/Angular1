@@ -1,6 +1,4 @@
 <div class="container" style="background-color: cadetblue">
-  <input [(ngModel)]="filterText" placeholder="Wpisz nazwę..." id="search" type="search" class="form-control">
-
 <div *ngFor="let item of items| filter:filterText">
 <div class="card" style="width: 70rem; text-align: center; background-color: #3388aa">
   <app-blog-item class="card-img-top" [image]="item.url"></app-blog-item>

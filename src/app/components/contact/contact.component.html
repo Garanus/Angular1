@@ -1,18 +1,30 @@
 <div class="container kontakt1">
   <h1>Skontaktuj się z nami!</h1>
-  <form>
+  <form [formGroup]="form">
     <div class="form-group">
       <label for="formGroupExampleInput">Imię</label>
-      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Imię">
+      <input type="text" class="form-control" formControlName="firstName" id="formGroupExampleInputName" placeholder="Imię">
+      <div *ngIf="form.get('firstName').touched && form.get('firstName').invalid" class="alert alert-danger error-prompt"
+           required="">
+        Proszę wprowadzić imię lub poprawić jego format używając jedynie liter
+      </div>
     </div>
     <div class="form-group">
       <label for="formGroupExampleInput">Nazwisko</label>
-      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nazwisko">
+      <input type="text" class="form-control" formControlName="lastName" id="formGroupExampleInputSurname" placeholder="Nazwisko">
+      <div *ngIf="form.get('lastName').touched && form.get('lastName').invalid" class="alert alert-danger error-prompt"
+           required="">
+        Proszę wprowadzić nazwisko lub poprawić jego format używając jedynie liter
+      </div>
     </div>
     <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Wprowadź email">
+      <input type="email" class="form-control" formControlName="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Wprowadź email">
       <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      <div *ngIf="form.get('email').touched && form.get('email').invalid" class="alert alert-danger error-prompt"
+           required="">
+        Proszę wprowadzić email lub poprawić jego format
+      </div>
     </div>
 
     <p>Płeć:</p>
@@ -37,7 +49,11 @@
 
     <div class="form-group">
       <label for="age">Wiek:</label>
-      <input type="number" class="form-control" name="age" id="age" min="18">
+      <input type="number" class="form-control" formControlName="age" name="age" id="age" min="18">
+      <div *ngIf="form.get('age').touched && form.get('age').invalid" class="alert alert-danger error-prompt"
+           required="">
+        Proszę wprowadzić wiek
+      </div>
     </div>
 
     <p>Stan cywilny:</p>
