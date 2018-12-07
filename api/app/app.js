@@ -18,9 +18,7 @@ app.use(express.static('public'));
 
 
 app.use(cors());
-app.listen(config.port, () => {
-  console.info(`Server is running at ${config.port}`)
-});
+
 mongoose.connect(config.databaseUrl, {useNewUrlParser: true, useCreateIndex: true}, (error) => {
   if (error) {
     console.error(error);
